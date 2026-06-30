@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warung Sembako anggara</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            margin-left: 15px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: all .3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(50, 12, 205, 0.15);
+            color: #07167b;
+        }
+
+        .navbar-nav .nav-link.active {
+            background-color: rgba(212, 220, 221, 0.15);
+            color: #0b7693;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(42, 130, 174, 0.5),
+                    rgba(127, 139, 150, 0.5)),
+                url('image/image poto warung.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .harga {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #198754;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                Warung Sembako Anggara
+            </a>
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only"> Warung Sembako Anggara</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Warung Sembako Anggara</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="beranda.html">Beranda</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="produk.html">Produk</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="tentang.html">Tentang</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontak.html">Kontak</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Produk -->
+            <section id="produk" class="container py-5">
+                <h2 class="text-center mb-4">Produk</h2>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/gaselpjj.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Gas elpj 3kg</h5>
+                                <p class="card-text">Harga mulai Rp20.000</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Gas')">Tambah ke Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/daiaa.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Daia</h5>
+                                <p class="card-text">Harga mulai Rp5.000/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('daia')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/daia.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Gula Pasir</h5>
+                                <p class="card-text">Harga mulai Rp19.500 / Kg</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Gula pasir')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/daia.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">minyak</h5>
+                                <p class="card-text">Harga mulai Rp20.000 / Kg</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('minyak')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/telur.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Telur</h5>
+                                <p class="card-text">Harga mulai Rp2.000 / per butir</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('telur')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/popmie.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Pop Mie</h5>
+                                <p class="card-text">Harga mulai Rp5.000 / cup</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('pop mie')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/susu.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">susu frish flag</h5>
+                                <p class="card-text">Harga mulai Rp14.000/kaleng</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('susu frish flag')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/susutigasapi.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">susu tiga sapi </h5>
+                                <p class="card-text">Harga mulai Rp14.000/kaleng</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('susu tiga sapi')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/miesedapkorea.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">mie sedap korea </h5>
+                                <p class="card-text">Harga mulai Rp3.500/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('mie sedap korea')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/miegorengaceh.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">mie goreng aceh </h5>
+                                <p class="card-text">Harga mulai Rp3.500/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('miegorengaceh')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/miesoto.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">mie soto </h5>
+                                <p class="card-text">Harga mulai Rp3.500/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('mie soto')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/mie sedaap goreng.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">mie sedaap goreng </h5>
+                                <p class="card-text">Harga mulai Rp3.500/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('mie sedaap goreng')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/aqua.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Aqua </h5>
+                                <p class="card-text">Harga mulai Rp6.000/botol</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Aqua')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/daiakecil.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Daia</h5>
+                                <p class="card-text">Harga mulai Rp1.000/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('daia')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/klin.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Klin </h5>
+                                <p class="card-text">Harga mulai Rp1.000/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Klin')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/baby happy.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Baby Happy </h5>
+                                <p class="card-text">Harga mulai Rp2.000/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Baby Happy')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/miesukses.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mie sukses</h5>
+                                <p class="card-text">Harga mulai Rp4.500/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('Mie Sukses')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow">
+                            <img src="image/mamalemon.jpeg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mama Lemon </h5>
+                                <p class="card-text">Harga mulai Rp2.000/pcs</p>
+                                <button class="btn-beli" onclick="tambahKeKeranjang('mama lemon')">Tambah ke
+                                    Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>           
+
+        <footer class="text-center">
+            <p>
+                Warung Sembako Anggara <br>
+                Alamat:Dusun Mulia Kasir Timur<br>
+                Desa Tandam Hilir II <br>
+                Kecamatan Hamparan Perak <br>
+                Kabupaten Deli Serdang, Sumatera Utara <br>
+                Kode Pos: 20374
+            </p>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="bootstrap/js/jQuery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

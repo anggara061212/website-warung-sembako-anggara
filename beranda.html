@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warung Sembako anggara</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            padding: 12px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            margin-left: 15px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: all .3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(50, 12, 205, 0.15);
+            color: #07167b;
+        }
+
+        .navbar-nav .nav-link.active {
+            background-color: rgba(212, 220, 221, 0.15);
+            color: #0b7693;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(42, 130, 174, 0.5),
+                    rgba(127, 139, 150, 0.5)),
+                url('image/image poto warung.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .harga {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #198754;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                🏪Warung Sembako Anggara
+            </a>
+            <nav class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only"> Warung Sembako Anggara</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Warung Sembako Anggara</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="beranda.html">Beranda</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="produk.html">Produk</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="tentang.html">Tentang</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontak.html">Kontak</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Hero -->
+            <section class="hero">
+                <div class="container">
+                    <h1 class="display-4 fw-bold">
+                        Selamat Datang di Warung Sembako Anggara
+                    </h1>
+                    <p class="lead">
+                        Menyediakan kebutuhan pokok dengan harga terjangkau.
+                    </p>
+                    <a href="#produk" class="btn btn-warning btn-lg">
+                        Lihat Produk
+                    </a>
+                </div>
+            </section>
+
+        <footer class="text-center">
+            <p>
+                Warung Sembako Anggara <br>
+                Alamat:Dusun Mulia Kasir Timur<br>
+                Desa Tandam Hilir II <br>
+                Kecamatan Hamparan Perak <br>
+                Kabupaten Deli Serdang, Sumatera Utara <br>
+                Kode Pos: 20374
+            </p>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="bootstrap/js/jQuery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
